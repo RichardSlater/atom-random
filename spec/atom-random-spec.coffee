@@ -72,3 +72,36 @@ describe "Random Initialization", ->
       expect(atom.notifications.notifications[0].message)
         .toBe('Error: unable to fetch seed from random.org: \
                 Internal Server Error')
+describe "Activation Commands", ->
+  [activationPromise] = []
+  it "has an activation command for each subscription", ->
+    runs ->
+      activationPromise = atom.packages.activatePackage("atom-random")
+      atom.packages.getLoadedPackage('atom-random').activateNow()
+
+    waitsForPromise ->
+      activationPromise
+
+    runs ->
+      atomRandom = atom.packages.getActivePackage('atom-random')
+      activationCommands = atomRandom.activationCommands['atom-workspace']
+      registeredCommands = atomRandom.mainModule.commands
+      expect(activationCommands)
+        .toContain(cmd) for cmd of registeredCommands
+describe "Menu Commands", ->
+  [activationPromise] = []
+  it "has an activation command for each subscription", ->
+    runs ->
+      activationPromise = atom.packages.activatePackage("atom-random")
+      atom.packages.getLoadedPackage('atom-random').activateNow()
+
+    waitsForPromise ->
+      activationPromise
+
+    runs ->
+      atomRandom = atom.packages.getActivePackage('atom-random')
+      subMenus = (m.command for m in atomRandom.menus[0][1].menu[0].submenu)
+      console.log subMenus
+      registeredCommands = atomRandom.mainModule.commands
+      expect(subMenus)
+        .toContain(cmd) for cmd of registeredCommands

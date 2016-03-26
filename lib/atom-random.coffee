@@ -20,6 +20,7 @@
 module.exports = AtomRandom =
   subscriptions: null
   chance: null
+  commands: null
 
   activate: (state) ->
     @chance = new Chance
@@ -33,14 +34,14 @@ module.exports = AtomRandom =
 
     chance = @chance
 
-    commands = {
+    @commands = {
       'atom-random:string': => @random(chance.string()),
       'atom-random:guid': => @random(chance.guid()),
       'atom-random:integer': => @random(chance.integer())
       'atom-random:boolean': => @random(chance.bool())
     }
 
-    @subscriptions.add atom.commands.add 'atom-workspace', commands
+    @subscriptions.add atom.commands.add 'atom-workspace', @commands
 
   deactivate: ->
     @subscriptions.dispose()
@@ -68,4 +69,4 @@ module.exports = AtomRandom =
 
   random: (data) ->
     if editor = atom.workspace.getActiveTextEditor()
-      editor.insertText(data)
+      editor.insertText(data.toString())
