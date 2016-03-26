@@ -1,0 +1,30 @@
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Random'
+      'submenu': [
+        {
+          'label': 'Reseed'
+          'command': 'atom-random:reseed'
+        },
+        {
+          'label': 'Random String'
+          'command': 'atom-random:string'
+        },
+        {
+          'label': 'Random GUID / UUID'
+          'command': 'atom-random:guid'
+        },
+        {
+          'label': 'Random Integer'
+          'command': 'atom-random:integer'
+        },
+        {
+          'label': 'Random Boolean'
+          'command': 'atom-random:bool'
+        }
+      ]
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "name": "atom-random",
+  "main": "./lib/atom-random",
+  "version": "0.0.1",
+  "description": "Generates several random data types, for use as passwords or as test data.",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "atom-random:reseed",
+    "atom-workspace": "atom-random:string",
+    "atom-workspace": "atom-random:guid",
+    "atom-workspace": "atom-random:integer",
+    "atom-workspace": "atom-random:bool"
+  },
+  "repository": "https://github.com/atom/atom-random",
+  "license": "MIT",
+  "licenses": [{
+    "type": "Apache-2.0",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0"
+  }],
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "chance": "^0.8.0"
+  }
+}
