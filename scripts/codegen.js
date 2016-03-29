@@ -66,7 +66,7 @@ fs.readFile(menuCson, 'utf8', function read(err, data) {
   }
   var menuParsed = CSON.parse(data);
   var tail = menuParsed.menu[0].submenu.slice(-2);
-  var subMenu = menuParsed.menu[0].submenu.slice(menuParsed.menu[0].submenu.length)
+  var subMenu = menuParsed.menu[0].submenu.slice(0, menuParsed.menu[0].submenu.length - 2)
   var newMenu = {
   	"label": "Random " + args.menuText,
   	"command": "atom-random:" + args.atomNoun
