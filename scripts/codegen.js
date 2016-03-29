@@ -33,7 +33,7 @@ fs.readFile(packageJson, 'utf8', function read(err, data) {
 
     fs.writeFile(packageJson, data, 'utf8', (err) => {
       if (err) throw err;
-      console.log('[✓] update successful, added "' + newCommand + '" to packages.json');
+      console.log('[?] update successful, added "' + newCommand + '" to packages.json');
     });
   } else {
     console.log('[ ] package.json already contains "' + newCommand + '"')
@@ -48,10 +48,10 @@ fs.readFile(libCoffee, 'utf8', function read(err, data) {
   }
   var newCoffee = "'" + newCommand + "': => @random(chance." + args.chanceNoun + "())";
   if (data.indexOf(newCoffee) === -1) {
-    data = data.replace(/# additional commands go here/g, newCoffee + "\r\n\t\t\t# additional commands go here");
+    data = data.replace(/# additional commands go here/g, newCoffee + "\r\n      # additional commands go here");
     fs.writeFile(libCoffee, data, 'utf8', (err) => {
       if (err) throw err;
-      console.log('[✓] update successful, added "' + newCommand + '" to atom-random.coffee');
+      console.log('[?] update successful, added "' + newCommand + '" to atom-random.coffee');
     });
   } else {
     console.log('[ ] atom-random.coffee already contains "' + newCommand + '"')
@@ -69,10 +69,10 @@ fs.readFile(menuCson, 'utf8', function read(err, data) {
   var subMenu = menuParsed.menu[0].submenu.slice(0, menuParsed.menu[0].submenu.length - 2)
   var newMenu = {
   	"label": "Random " + args.menuText,
-  	"command": "atom-random:" + args.atomNoun
+  	"command": newCommand
   };
 
-  if (subMenu.indexOf(newMenu) === -1) {
+  if (subMenu.map((x) => x.command).indexOf(newCommand) === -1) {
     subMenu.push(newMenu);
     menuParsed.menu[0].submenu = subMenu.concat(tail);
 
@@ -80,7 +80,7 @@ fs.readFile(menuCson, 'utf8', function read(err, data) {
 
     fs.writeFile(menuCson, data, 'utf8', (err) => {
       if (err) throw err;
-      console.log('[✓] update successful, added "' + newCommand + '" to atom-random.cson');
+      console.log('[?] update successful, added "' + newCommand + '" to atom-random.cson');
     });
   } else {
     console.log('[ ] atom-random.cson already contains "' + newCommand + '"')
