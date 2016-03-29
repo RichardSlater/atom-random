@@ -17,7 +17,17 @@
 AtomRandom = require '../lib/atom-random'
 
 describe "Random Data", ->
-  [workspaceElement, activationPromise, editor, changeHandler] = []
+  [workspaceElement, activationPromise, editor, changeHandler, chance] = []
+
+  dataTest = (dataType, expectValue) ->
+    runs ->
+      atom.commands.dispatch workspaceElement, "atom-random:#{dataType}"
+
+    waitsFor ->
+      changeHandler.callCount > 0
+
+    runs ->
+      expect(editor.getText()).toEqual expectValue
 
   beforeEach ->
     waitsForPromise ->
@@ -36,47 +46,22 @@ describe "Random Data", ->
       changeHandler = jasmine.createSpy('changeHandler')
       editor.onDidChange(changeHandler)
       chance = atom.packages.getActivePackage('atom-random').mainModule.chance
-      spyOn(chance, 'string').andReturn('XuEFM!kalinXp')
-      spyOn(chance, 'guid').andReturn('e48c5e7d-7ca3-5de5-a25d-c81389d65ed3')
-      spyOn(chance, 'integer').andReturn('123456789')
-      spyOn(chance, 'bool').andReturn('true')
 
   it "inserts random string", ->
-    runs ->
-      atom.commands.dispatch workspaceElement, 'atom-random:string'
-
-    waitsFor ->
-      changeHandler.callCount > 0
-
-    runs ->
-      expect(editor.getText()).toEqual 'XuEFM!kalinXp'
-
+    spyOn(chance, 'string').andReturn('XuEFM!kalinXp')
+    dataTest 'string', 'XuEFM!kalinXp'
   it "inserts random guid", ->
-    runs ->
-      atom.commands.dispatch workspaceElement, 'atom-random:guid'
-
-    waitsFor ->
-      changeHandler.callCount > 0
-
-    runs ->
-      expect(editor.getText()).toEqual 'e48c5e7d-7ca3-5de5-a25d-c81389d65ed3'
-
+    spyOn(chance, 'guid').andReturn('e48c5e7d-7ca3-5de5-a25d-c81389d65ed3')
+    dataTest 'guid', 'e48c5e7d-7ca3-5de5-a25d-c81389d65ed3'
   it "inserts random integer", ->
-    runs ->
-      atom.commands.dispatch workspaceElement, 'atom-random:integer'
-
-    waitsFor ->
-      changeHandler.callCount > 0
-
-    runs ->
-      expect(editor.getText()).toEqual '123456789'
-
+    spyOn(chance, 'integer').andReturn('123456789')
+    dataTest 'integer', '123456789'
   it "inserts random boolean", ->
-    runs ->
-      atom.commands.dispatch workspaceElement, 'atom-random:boolean'
-
-    waitsFor ->
-      changeHandler.callCount > 0
-
-    runs ->
-      expect(editor.getText()).toEqual 'true'
+    dataTest 'boolean', 'true'
+    spyOn(chance, 'bool').andReturn('true')
+  it "inserts random character", ->
+    dataTest 'character', 'a'
+    spyOn(chance, 'character').andReturn('a')
+  it "inserts random floating point number", ->
+    dataTest 'floating', '789.123'
+    spyOn(chance, 'floating').andReturn('789.123')

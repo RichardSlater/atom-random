@@ -19,6 +19,18 @@
         'command': 'atom-random:boolean'
       },
       {
+        'label': 'Random Character'
+        'command': 'atom-random:character'
+      },
+      {
+        'label': 'Random Floating Point Number'
+        'command': 'atom-random:floating'
+      },
+      {
+        'label': 'Random Natural'
+        'command': 'atom-random:natural'
+      },
+      {
         'type': 'separator'
       },
       {

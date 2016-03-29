@@ -10,11 +10,13 @@
       "atom-random:string",
       "atom-random:guid",
       "atom-random:integer",
-      "atom-random:boolean"
+      "atom-random:boolean",
+      "atom-random:character",
+      "atom-random:floating"
     ]
   },
   "repository": "https://github.com/atom/atom-random",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "licenses": [{
     "type": "Apache-2.0",
     "url": "http://www.apache.org/licenses/LICENSE-2.0"
@@ -24,5 +26,8 @@
   },
   "dependencies": {
     "chance": "^0.8.0"
+  },
+  "devDependencies": {
+    
   }
 }

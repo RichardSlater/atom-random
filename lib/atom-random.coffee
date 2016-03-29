@@ -39,6 +39,9 @@ module.exports = AtomRandom =
       'atom-random:guid': => @random(chance.guid()),
       'atom-random:integer': => @random(chance.integer())
       'atom-random:boolean': => @random(chance.bool())
+      'atom-random:character': => @random(chance.character())
+      'atom-random:floating': => @random(chance.floating())
+      'atom-random:natural': => @random(chance.natural())
     }
 
     @subscriptions.add atom.commands.add 'atom-workspace', @commands
