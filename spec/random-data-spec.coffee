@@ -78,3 +78,6 @@ describe "Random Data", ->
     doz ufo zegnuttuf udicav zaal pacam tetvethoh vobomo diuzpab. Gel isfa hin
     set fe lumse ji ra fi vusgedma vej peb tuvej wates uligepceg pawelov jajop
     rap. Vop enonunane ena lewi ho akebubam ni zaun fehip jum eju nuzja wez."""
+  it "inserts random sentence", ->
+    spyOn(chance, 'sentence').andReturn('Ham ebumo gihcov panvofa ova dowved pibvafo jej go wiaj uza kegamsu elu mom vamac cukurewa katubole.')
+    dataTest 'sentence', 'Ham ebumo gihcov panvofa ova dowved pibvafo jej go wiaj uza kegamsu elu mom vamac cukurewa katubole.'
