@@ -1,5 +1,6 @@
 var args = require('minimist')(process.argv.slice(2));
 var CSON = require('cson');
+var chance = require('chance').Chance();
 
 var usage = function () {
   console.log('Usage:');
@@ -33,7 +34,7 @@ fs.readFile(packageJson, 'utf8', function read(err, data) {
 
     fs.writeFile(packageJson, data, 'utf8', (err) => {
       if (err) throw err;
-      console.log('[?] update successful, added "' + newCommand + '" to packages.json');
+      console.log('[✓] update successful, added "' + newCommand + '" to packages.json');
     });
   } else {
     console.log('[ ] package.json already contains "' + newCommand + '"')
@@ -51,10 +52,32 @@ fs.readFile(libCoffee, 'utf8', function read(err, data) {
     data = data.replace(/# additional commands go here/g, newCoffee + "\r\n      # additional commands go here");
     fs.writeFile(libCoffee, data, 'utf8', (err) => {
       if (err) throw err;
-      console.log('[?] update successful, added "' + newCommand + '" to atom-random.coffee');
+      console.log('[✓] update successful, added "' + newCommand + '" to atom-random.coffee');
     });
   } else {
     console.log('[ ] atom-random.coffee already contains "' + newCommand + '"')
+  }
+});
+
+var specCoffee = '../spec/atom-random-data-spec.coffee';
+
+fs.readFile(specCoffee, 'utf8', function read(err, data) {
+  if (err) {
+    throw err;
+  }
+  var randomData = eval("chance." + args.chanceNoun + "();");
+  var newSpec = "  it \"inserts random " + args.chanceNoun + "\", ->" + "\n" +
+      "    dataTest '" + args.atomNoun + "', '" + randomData + "'" + "\n" +
+      "    spyOn(chance, '" + args.chanceNoun + "').andReturn('" + randomData + "')" + "\n";
+
+  if (data.indexOf("inserts random " + args.chanceNoun) === -1) {
+    data = data + newSpec;
+    fs.writeFile(specCoffee, data, 'utf8', (err) => {
+      if (err) throw err;
+      console.log('[✓] update successful, added "' + newCommand + '" to atom-random-data-spec.coffee');
+    });
+  } else {
+    console.log('[ ] atom-random-data-spec.coffee already contains "' + newCommand + '"')
   }
 });
 
@@ -80,7 +103,7 @@ fs.readFile(menuCson, 'utf8', function read(err, data) {
 
     fs.writeFile(menuCson, data, 'utf8', (err) => {
       if (err) throw err;
-      console.log('[?] update successful, added "' + newCommand + '" to atom-random.cson');
+      console.log('[✓] update successful, added "' + newCommand + '" to atom-random.cson');
     });
   } else {
     console.log('[ ] atom-random.cson already contains "' + newCommand + '"')
