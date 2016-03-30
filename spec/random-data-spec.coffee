@@ -14,14 +14,14 @@
 
 "use strict"
 
-AtomRandom = require '../lib/atom-random'
+AtomRandom = require '../lib/random'
 
 describe "Random Data", ->
   [workspaceElement, activationPromise, editor, changeHandler, chance] = []
 
   dataTest = (dataType, expectValue) ->
     runs ->
-      atom.commands.dispatch workspaceElement, "atom-random:#{dataType}"
+      atom.commands.dispatch workspaceElement, "random:#{dataType}"
 
     waitsFor ->
       changeHandler.callCount > 0
@@ -34,8 +34,8 @@ describe "Random Data", ->
       atom.workspace.open()
 
     runs ->
-      activationPromise = atom.packages.activatePackage("atom-random")
-      atom.packages.getLoadedPackage('atom-random').activateNow()
+      activationPromise = atom.packages.activatePackage("random")
+      atom.packages.getLoadedPackage('random').activateNow()
 
     waitsForPromise ->
       activationPromise
@@ -45,7 +45,7 @@ describe "Random Data", ->
       workspaceElement = atom.views.getView(atom.workspace)
       changeHandler = jasmine.createSpy('changeHandler')
       editor.onDidChange(changeHandler)
-      chance = atom.packages.getActivePackage('atom-random').mainModule.chance
+      chance = atom.packages.getActivePackage('random').mainModule.chance
 
   it "inserts random string", ->
     spyOn(chance, 'string').andReturn('XuEFM!kalinXp')
@@ -57,14 +57,24 @@ describe "Random Data", ->
     spyOn(chance, 'integer').andReturn('123456789')
     dataTest 'integer', '123456789'
   it "inserts random boolean", ->
-    dataTest 'boolean', 'true'
     spyOn(chance, 'bool').andReturn('true')
+    dataTest 'boolean', 'true'
   it "inserts random character", ->
-    dataTest 'character', 'a'
     spyOn(chance, 'character').andReturn('a')
+    dataTest 'character', 'a'
   it "inserts random floating point number", ->
-    dataTest 'floating', '789.123'
     spyOn(chance, 'floating').andReturn('789.123')
+    dataTest 'floating', '789.123'
   it "inserts random paragraph", ->
-    dataTest 'paragraph', 'Ducgin hugim rab omepamna wir cocvira isadu tu savsa seecga pesut uzreov matuja dah ovatopgu insinzu lasuswog. Sat javkes vitpodpod esofuh ramliwe doz ufo zegnuttuf udicav zaal pacam tetvethoh vobomo diuzpab. Gel isfa hin set fe lumse ji ra fi vusgedma vej peb tuvej wates uligepceg pawelov jajop rap. Vop enonunane ena lewi ho akebubam ni zaun fehip jum eju nuzja wez.'
-    spyOn(chance, 'paragraph').andReturn('Ducgin hugim rab omepamna wir cocvira isadu tu savsa seecga pesut uzreov matuja dah ovatopgu insinzu lasuswog. Sat javkes vitpodpod esofuh ramliwe doz ufo zegnuttuf udicav zaal pacam tetvethoh vobomo diuzpab. Gel isfa hin set fe lumse ji ra fi vusgedma vej peb tuvej wates uligepceg pawelov jajop rap. Vop enonunane ena lewi ho akebubam ni zaun fehip jum eju nuzja wez.')
+    spyOn(chance, 'paragraph').andReturn(\
+    """Ducgin hugim rab omepamna wir cocvira isadu tu savsa seecga pesut uzreov
+    matuja dah ovatopgu insinzu lasuswog. Sat javkes vitpodpod esofuh ramliwe
+    doz ufo zegnuttuf udicav zaal pacam tetvethoh vobomo diuzpab. Gel isfa hin
+    set fe lumse ji ra fi vusgedma vej peb tuvej wates uligepceg pawelov jajop
+    rap. Vop enonunane ena lewi ho akebubam ni zaun fehip jum eju nuzja wez.""")
+    dataTest 'paragraph', \
+    """Ducgin hugim rab omepamna wir cocvira isadu tu savsa seecga pesut uzreov
+    matuja dah ovatopgu insinzu lasuswog. Sat javkes vitpodpod esofuh ramliwe
+    doz ufo zegnuttuf udicav zaal pacam tetvethoh vobomo diuzpab. Gel isfa hin
+    set fe lumse ji ra fi vusgedma vej peb tuvej wates uligepceg pawelov jajop
+    rap. Vop enonunane ena lewi ho akebubam ni zaun fehip jum eju nuzja wez."""

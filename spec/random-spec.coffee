@@ -14,7 +14,7 @@
 
 "use strict"
 
-AtomRandom = require '../lib/atom-random'
+AtomRandom = require '../lib/random'
 
 describe "Random Initialization", ->
   [oldChance] = []
@@ -76,14 +76,14 @@ describe "Activation Commands", ->
   [activationPromise] = []
   it "has an activation command for each subscription", ->
     runs ->
-      activationPromise = atom.packages.activatePackage("atom-random")
-      atom.packages.getLoadedPackage('atom-random').activateNow()
+      activationPromise = atom.packages.activatePackage("random")
+      atom.packages.getLoadedPackage('random').activateNow()
 
     waitsForPromise ->
       activationPromise
 
     runs ->
-      atomRandom = atom.packages.getActivePackage('atom-random')
+      atomRandom = atom.packages.getActivePackage('random')
       activationCommands = atomRandom.activationCommands['atom-workspace']
       registeredCommands = atomRandom.mainModule.commands
       expect(activationCommands)
@@ -92,14 +92,14 @@ describe "Menu Commands", ->
   [activationPromise] = []
   it "has an activation command for each subscription", ->
     runs ->
-      activationPromise = atom.packages.activatePackage("atom-random")
-      atom.packages.getLoadedPackage('atom-random').activateNow()
+      activationPromise = atom.packages.activatePackage("random")
+      atom.packages.getLoadedPackage('random').activateNow()
 
     waitsForPromise ->
       activationPromise
 
     runs ->
-      atomRandom = atom.packages.getActivePackage('atom-random')
+      atomRandom = atom.packages.getActivePackage('random')
       subMenus = (m.command for m in atomRandom.menus[0][1].menu[0].submenu)
       console.log subMenus
       registeredCommands = atomRandom.mainModule.commands

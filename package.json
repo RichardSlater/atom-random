@@ -1,23 +1,23 @@
 {
-  "name": "atom-random",
-  "main": "./lib/atom-random",
+  "name": "random",
+  "main": "./lib/random",
   "version": "0.0.1",
   "description": "Generates several random data types, for use as passwords or as test data.",
   "keywords": [],
   "activationCommands": {
     "atom-workspace": [
-      "atom-random:reseed",
-      "atom-random:string",
-      "atom-random:guid",
-      "atom-random:integer",
-      "atom-random:boolean",
-      "atom-random:character",
-      "atom-random:floating",
-      "atom-random:natural",
-      "atom-random:paragraph"
+      "random:reseed",
+      "random:string",
+      "random:guid",
+      "random:integer",
+      "random:boolean",
+      "random:character",
+      "random:floating",
+      "random:natural",
+      "random:paragraph"
     ]
   },
-  "repository": "https://github.com/atom/atom-random",
+  "repository": "https://github.com/atom/random",
   "license": "Apache-2.0",
   "licenses": [
     {

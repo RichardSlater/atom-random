@@ -30,19 +30,19 @@ module.exports = AtomRandom =
     @subscriptions = new CompositeDisposable
 
     @subscriptions.add atom.commands.add 'atom-workspace',
-      'atom-random:reseed': => @reseed()
+      'random:reseed': => @reseed()
 
     chance = @chance
 
     @commands = {
-      'atom-random:string': => @random(chance.string()),
-      'atom-random:guid': => @random(chance.guid()),
-      'atom-random:integer': => @random(chance.integer())
-      'atom-random:boolean': => @random(chance.bool())
-      'atom-random:character': => @random(chance.character())
-      'atom-random:floating': => @random(chance.floating())
-      'atom-random:natural': => @random(chance.natural())
-      'atom-random:paragraph': => @random(chance.paragraph())
+      'random:string': => @random(chance.string()),
+      'random:guid': => @random(chance.guid()),
+      'random:integer': => @random(chance.integer())
+      'random:boolean': => @random(chance.bool())
+      'random:character': => @random(chance.character())
+      'random:floating': => @random(chance.floating())
+      'random:natural': => @random(chance.natural())
+      'random:paragraph': => @random(chance.paragraph())
       # additional commands go here
     }
 

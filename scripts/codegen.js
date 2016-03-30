@@ -1,3 +1,17 @@
+// Copyright 2016 Richard Slater
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//   http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 var args = require('minimist')(process.argv.slice(2));
 var CSON = require('cson');
 var chance = require('chance').Chance();
@@ -20,7 +34,7 @@ if (!hasArgAtomNoun || !hasArgMenuText || !hasArgChanceNoun) {
 
 var fs = require('fs');
 var packageJson = '../package.json';
-var newCommand = 'atom-random:' + args['atomNoun'];
+var newCommand = 'random:' + args['atomNoun'];
 
 fs.readFile(packageJson, 'utf8', function read(err, data) {
   if (err) {
@@ -41,7 +55,7 @@ fs.readFile(packageJson, 'utf8', function read(err, data) {
   }
 });
 
-var libCoffee = '../lib/atom-random.coffee';
+var libCoffee = '../lib/random.coffee';
 
 fs.readFile(libCoffee, 'utf8', function read(err, data) {
   if (err) {
@@ -52,14 +66,14 @@ fs.readFile(libCoffee, 'utf8', function read(err, data) {
     data = data.replace(/# additional commands go here/g, newCoffee + "\r\n      # additional commands go here");
     fs.writeFile(libCoffee, data, 'utf8', (err) => {
       if (err) throw err;
-      console.log('[✓] update successful, added "' + newCommand + '" to atom-random.coffee');
+      console.log('[✓] update successful, added "' + newCommand + '" to random.coffee');
     });
   } else {
-    console.log('[ ] atom-random.coffee already contains "' + newCommand + '"')
+    console.log('[ ] random.coffee already contains "' + newCommand + '"')
   }
 });
 
-var specCoffee = '../spec/atom-random-data-spec.coffee';
+var specCoffee = '../spec/random-data-spec.coffee';
 
 fs.readFile(specCoffee, 'utf8', function read(err, data) {
   if (err) {
@@ -67,21 +81,21 @@ fs.readFile(specCoffee, 'utf8', function read(err, data) {
   }
   var randomData = eval("chance." + args.chanceNoun + "();");
   var newSpec = "  it \"inserts random " + args.chanceNoun + "\", ->" + "\n" +
-      "    dataTest '" + args.atomNoun + "', '" + randomData + "'" + "\n" +
-      "    spyOn(chance, '" + args.chanceNoun + "').andReturn('" + randomData + "')" + "\n";
+      "    spyOn(chance, '" + args.chanceNoun + "').andReturn('" + randomData + "')" + "\n" +
+      "    dataTest '" + args.atomNoun + "', '" + randomData + "'" + "\n";
 
   if (data.indexOf("inserts random " + args.chanceNoun) === -1) {
     data = data + newSpec;
     fs.writeFile(specCoffee, data, 'utf8', (err) => {
       if (err) throw err;
-      console.log('[✓] update successful, added "' + newCommand + '" to atom-random-data-spec.coffee');
+      console.log('[✓] update successful, added "' + newCommand + '" to random-data-spec.coffee');
     });
   } else {
-    console.log('[ ] atom-random-data-spec.coffee already contains "' + newCommand + '"')
+    console.log('[ ] random-data-spec.coffee already contains "' + newCommand + '"')
   }
 });
 
-var menuCson = '../menus/atom-random.cson';
+var menuCson = '../menus/random.cson';
 
 fs.readFile(menuCson, 'utf8', function read(err, data) {
   if (err) {
@@ -103,9 +117,9 @@ fs.readFile(menuCson, 'utf8', function read(err, data) {
 
     fs.writeFile(menuCson, data, 'utf8', (err) => {
       if (err) throw err;
-      console.log('[✓] update successful, added "' + newCommand + '" to atom-random.cson');
+      console.log('[✓] update successful, added "' + newCommand + '" to random.cson');
     });
   } else {
-    console.log('[ ] atom-random.cson already contains "' + newCommand + '"')
+    console.log('[ ] random.cson already contains "' + newCommand + '"')
   }
 });
