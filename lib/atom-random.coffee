@@ -42,6 +42,7 @@ module.exports = AtomRandom =
       'atom-random:character': => @random(chance.character())
       'atom-random:floating': => @random(chance.floating())
       'atom-random:natural': => @random(chance.natural())
+      'atom-random:paragraph': => @random(chance.paragraph())
       # additional commands go here
     }
 

@@ -13,7 +13,8 @@
       "atom-random:boolean",
       "atom-random:character",
       "atom-random:floating",
-      "atom-random:natural"
+      "atom-random:natural",
+      "atom-random:paragraph"
     ]
   },
   "repository": "https://github.com/atom/atom-random",

@@ -65,3 +65,6 @@ describe "Random Data", ->
   it "inserts random floating point number", ->
     dataTest 'floating', '789.123'
     spyOn(chance, 'floating').andReturn('789.123')
+  it "inserts random paragraph", ->
+    dataTest 'paragraph', 'Ducgin hugim rab omepamna wir cocvira isadu tu savsa seecga pesut uzreov matuja dah ovatopgu insinzu lasuswog. Sat javkes vitpodpod esofuh ramliwe doz ufo zegnuttuf udicav zaal pacam tetvethoh vobomo diuzpab. Gel isfa hin set fe lumse ji ra fi vusgedma vej peb tuvej wates uligepceg pawelov jajop rap. Vop enonunane ena lewi ho akebubam ni zaun fehip jum eju nuzja wez.'
+    spyOn(chance, 'paragraph').andReturn('Ducgin hugim rab omepamna wir cocvira isadu tu savsa seecga pesut uzreov matuja dah ovatopgu insinzu lasuswog. Sat javkes vitpodpod esofuh ramliwe doz ufo zegnuttuf udicav zaal pacam tetvethoh vobomo diuzpab. Gel isfa hin set fe lumse ji ra fi vusgedma vej peb tuvej wates uligepceg pawelov jajop rap. Vop enonunane ena lewi ho akebubam ni zaun fehip jum eju nuzja wez.')

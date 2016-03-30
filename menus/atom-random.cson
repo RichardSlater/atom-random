@@ -1,41 +1,45 @@
-'menu': [
+menu: [
   {
-    'label': 'Random'
-    'submenu': [
+    label: "Random"
+    submenu: [
       {
-        'label': 'Random String'
-        'command': 'atom-random:string'
-      },
+        label: "Random String"
+        command: "atom-random:string"
+      }
       {
-        'label': 'Random GUID / UUID'
-        'command': 'atom-random:guid'
-      },
+        label: "Random GUID / UUID"
+        command: "atom-random:guid"
+      }
       {
-        'label': 'Random Integer'
-        'command': 'atom-random:integer'
-      },
+        label: "Random Integer"
+        command: "atom-random:integer"
+      }
       {
-        'label': 'Random Boolean'
-        'command': 'atom-random:boolean'
-      },
+        label: "Random Boolean"
+        command: "atom-random:boolean"
+      }
       {
-        'label': 'Random Character'
-        'command': 'atom-random:character'
-      },
+        label: "Random Character"
+        command: "atom-random:character"
+      }
       {
-        'label': 'Random Floating Point Number'
-        'command': 'atom-random:floating'
-      },
+        label: "Random Floating Point Number"
+        command: "atom-random:floating"
+      }
       {
-        'label': 'Random Natural'
-        'command': 'atom-random:natural'
-      },
+        label: "Random Natural"
+        command: "atom-random:natural"
+      }
       {
-        'type': 'separator'
-      },
+        label: "Random Paragraph"
+        command: "atom-random:paragraph"
+      }
       {
-        'label': 'Reseed'
-        'command': 'atom-random:reseed'
+        type: "separator"
+      }
+      {
+        label: "Reseed"
+        command: "atom-random:reseed"
       }
     ]
   }
