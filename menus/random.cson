@@ -39,6 +39,14 @@ menu: [
         command: "random:sentence"
       }
       {
+        label: "Random Syllable"
+        command: "random:syllable"
+      }
+      {
+        label: "Random Word"
+        command: "random:word"
+      }
+      {
         type: "separator"
       }
       {

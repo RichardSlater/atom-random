@@ -81,3 +81,9 @@ describe "Random Data", ->
   it "inserts random sentence", ->
     spyOn(chance, 'sentence').andReturn('Ham ebumo gihcov panvofa ova dowved pibvafo jej go wiaj uza kegamsu elu mom vamac cukurewa katubole.')
     dataTest 'sentence', 'Ham ebumo gihcov panvofa ova dowved pibvafo jej go wiaj uza kegamsu elu mom vamac cukurewa katubole.'
+  it "inserts random syllable", ->
+    spyOn(chance, 'syllable').andReturn('cos')
+    dataTest 'syllable', 'cos'
+  it "inserts random word", ->
+    spyOn(chance, 'word').andReturn('lavles')
+    dataTest 'word', 'lavles'

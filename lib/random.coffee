@@ -44,6 +44,8 @@ module.exports = AtomRandom =
       'random:natural': => @random(chance.natural())
       'random:paragraph': => @random(chance.paragraph())
       'random:sentence': => @random(chance.sentence())
+      'random:syllable': => @random(chance.syllable())
+      'random:word': => @random(chance.word())
       # additional commands go here
     }
 

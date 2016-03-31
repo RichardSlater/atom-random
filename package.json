@@ -15,7 +15,9 @@
       "random:floating",
       "random:natural",
       "random:paragraph",
-      "random:sentence"
+      "random:sentence",
+      "random:syllable",
+      "random:word"
     ]
   },
   "repository": "https://github.com/atom/random",
