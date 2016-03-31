@@ -47,6 +47,42 @@ menu: [
         command: "random:word"
       }
       {
+        label: "Random Age"
+        command: "random:age"
+      }
+      {
+        label: "Random Birthday"
+        command: "random:birthday"
+      }
+      {
+        label: "Random First Name"
+        command: "random:firstname"
+      }
+      {
+        label: "Random Last Name"
+        command: "random:lastname"
+      }
+      {
+        label: "Random Gender"
+        command: "random:gender"
+      }
+      {
+        label: "Random Name"
+        command: "random:name"
+      }
+      {
+        label: "Random Prefix"
+        command: "random:prefix"
+      }
+      {
+        label: "Random Social Security Number"
+        command: "random:ssn"
+      }
+      {
+        label: "Random Suffix"
+        command: "random:suffix"
+      }
+      {
         type: "separator"
       }
       {

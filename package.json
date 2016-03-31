@@ -17,7 +17,16 @@
       "random:paragraph",
       "random:sentence",
       "random:syllable",
-      "random:word"
+      "random:word",
+      "random:age",
+      "random:birthday",
+      "random:firstname",
+      "random:lastname",
+      "random:gender",
+      "random:name",
+      "random:prefix",
+      "random:ssn",
+      "random:suffix"
     ]
   },
   "repository": "https://github.com/atom/random",

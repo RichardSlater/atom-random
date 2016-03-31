@@ -46,6 +46,15 @@ module.exports = AtomRandom =
       'random:sentence': => @random(chance.sentence())
       'random:syllable': => @random(chance.syllable())
       'random:word': => @random(chance.word())
+      'random:age': => @random(chance.age())
+      'random:birthday': => @random(chance.birthday())
+      'random:firstname': => @random(chance.first())
+      'random:lastname': => @random(chance.last())
+      'random:gender': => @random(chance.gender())
+      'random:name': => @random(chance.name())
+      'random:prefix': => @random(chance.prefix())
+      'random:ssn': => @random(chance.ssn())
+      'random:suffix': => @random(chance.suffix())
       # additional commands go here
     }
 

@@ -87,3 +87,30 @@ describe "Random Data", ->
   it "inserts random word", ->
     spyOn(chance, 'word').andReturn('lavles')
     dataTest 'word', 'lavles'
+  it "inserts random age", ->
+    spyOn(chance, 'age').andReturn('51')
+    dataTest 'age', '51'
+  it "inserts random birthday", ->
+    spyOn(chance, 'birthday').andReturn('Mon Jun 02 1975 04:29:41 GMT+0100 (GMT Summer Time)')
+    dataTest 'birthday', 'Mon Jun 02 1975 04:29:41 GMT+0100 (GMT Summer Time)'
+  it "inserts random first", ->
+    spyOn(chance, 'first').andReturn('Lucile')
+    dataTest 'firstname', 'Lucile'
+  it "inserts random last", ->
+    spyOn(chance, 'last').andReturn('Castro')
+    dataTest 'lastname', 'Castro'
+  it "inserts random gender", ->
+    spyOn(chance, 'gender').andReturn('Female')
+    dataTest 'gender', 'Female'
+  it "inserts random name", ->
+    spyOn(chance, 'name').andReturn('Ola McKenzie')
+    dataTest 'name', 'Ola McKenzie'
+  it "inserts random prefix", ->
+    spyOn(chance, 'prefix').andReturn('Miss')
+    dataTest 'prefix', 'Miss'
+  it "inserts random ssn", ->
+    spyOn(chance, 'ssn').andReturn('066-32-4255')
+    dataTest 'ssn', '066-32-4255'
+  it "inserts random suffix", ->
+    spyOn(chance, 'suffix').andReturn('Jr.')
+    dataTest 'suffix', 'Jr.'
