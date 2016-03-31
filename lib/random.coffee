@@ -90,6 +90,14 @@ module.exports = AtomRandom =
       'random:month': => @random(chance.month())
       'random:year': => @random(chance.year())
       'random:timestamp': => @random(chance.timestamp())
+      'random:creditcard': => @random(chance.cc())
+      'random:cc_type': => @random(chance.cc_type())
+      'random:currency': => @random(chance.currency())
+      'random:currency_pair': => @random(chance.currency_pair())
+      'random:dollar': => @random(chance.dollar())
+      'random:exp': => @random(chance.exp())
+      'random:exp_month': => @random(chance.exp_month())
+      'random:exp_year': => @random(chance.exp_year())
       # additional commands go here
     }
 

@@ -219,3 +219,27 @@ describe "Random Data", ->
   it "inserts random timestamp", ->
     spyOn(chance, 'timestamp').andReturn('25272414')
     dataTest 'timestamp', '25272414'
+  it "inserts random cc", ->
+    spyOn(chance, 'cc').andReturn('5610025702228204')
+    dataTest 'creditcard', '5610025702228204'
+  it "inserts random cc_type", ->
+    spyOn(chance, 'cc_type').andReturn('Solo')
+    dataTest 'cc_type', 'Solo'
+  it "inserts random currency", ->
+    spyOn(chance, 'currency').andReturn('[object Object]')
+    dataTest 'currency', '[object Object]'
+  it "inserts random currency_pair", ->
+    spyOn(chance, 'currency_pair').andReturn('[object Object],[object Object]')
+    dataTest 'currency_pair', '[object Object],[object Object]'
+  it "inserts random dollar", ->
+    spyOn(chance, 'dollar').andReturn('$8485.12')
+    dataTest 'dollar', '$8485.12'
+  it "inserts random exp", ->
+    spyOn(chance, 'exp').andReturn('03/2017')
+    dataTest 'exp', '03/2017'
+  it "inserts random exp_month", ->
+    spyOn(chance, 'exp_month').andReturn('05')
+    dataTest 'exp_month', '05'
+  it "inserts random exp_year", ->
+    spyOn(chance, 'exp_year').andReturn('2019')
+    dataTest 'exp_year', '2019'

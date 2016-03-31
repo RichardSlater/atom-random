@@ -61,7 +61,15 @@
       "random:hammertime",
       "random:month",
       "random:year",
-      "random:timestamp"
+      "random:timestamp",
+      "random:creditcard",
+      "random:cc_type",
+      "random:currency",
+      "random:currency_pair",
+      "random:dollar",
+      "random:exp",
+      "random:exp_month",
+      "random:exp_year"
     ]
   },
   "repository": "https://github.com/atom/random",

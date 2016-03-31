@@ -223,6 +223,38 @@ menu: [
         command: "random:timestamp"
       }
       {
+        label: "Random Credit Card Number"
+        command: "random:creditcard"
+      }
+      {
+        label: "Random Credit Card Type"
+        command: "random:cc_type"
+      }
+      {
+        label: "Random Currency"
+        command: "random:currency"
+      }
+      {
+        label: "Random Currency Pair"
+        command: "random:currency_pair"
+      }
+      {
+        label: "Random Dollar Amount"
+        command: "random:dollar"
+      }
+      {
+        label: "Random Credit Card Expiration"
+        command: "random:exp"
+      }
+      {
+        label: "Random Credit Card Expiration Month"
+        command: "random:exp_month"
+      }
+      {
+        label: "Random Credit Card Expiration Year"
+        command: "random:exp_year"
+      }
+      {
         type: "separator"
       }
       {
