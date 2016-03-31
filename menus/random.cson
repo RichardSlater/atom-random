@@ -155,6 +155,54 @@ menu: [
         command: "random:url"
       }
       {
+        label: "Random Address"
+        command: "random:address"
+      }
+      {
+        label: "Random Altitude"
+        command: "random:altitude"
+      }
+      {
+        label: "Random Area Code"
+        command: "random:areacode"
+      }
+      {
+        label: "Random City"
+        command: "random:city"
+      }
+      {
+        label: "Random Coordinates"
+        command: "random:coordinates"
+      }
+      {
+        label: "Random Country"
+        command: "random:country"
+      }
+      {
+        label: "Random Phone Number"
+        command: "random:phone"
+      }
+      {
+        label: "Random Postal"
+        command: "random:postal"
+      }
+      {
+        label: "Random Province"
+        command: "random:province"
+      }
+      {
+        label: "Random State"
+        command: "random:state"
+      }
+      {
+        label: "Random Street"
+        command: "random:street"
+      }
+      {
+        label: "Random U.S. ZIP Code"
+        command: "random:zip"
+      }
+      {
         type: "separator"
       }
       {

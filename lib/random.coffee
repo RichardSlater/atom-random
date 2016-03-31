@@ -73,6 +73,18 @@ module.exports = AtomRandom =
       'random:tld': => @random(chance.tld())
       'random:twitter': => @random(chance.twitter())
       'random:url': => @random(chance.url())
+      'random:address': => @random(chance.address())
+      'random:altitude': => @random(chance.altitude())
+      'random:areacode': => @random(chance.areacode())
+      'random:city': => @random(chance.city())
+      'random:coordinates': => @random(chance.coordinates())
+      'random:country': => @random(chance.country())
+      'random:phone': => @random(chance.phone())
+      'random:postal': => @random(chance.postal())
+      'random:province': => @random(chance.province())
+      'random:state': => @random(chance.state())
+      'random:street': => @random(chance.street())
+      'random:zip': => @random(chance.zip())
       # additional commands go here
     }
 

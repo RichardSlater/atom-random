@@ -44,7 +44,19 @@
       "random:klout",
       "random:tld",
       "random:twitter",
-      "random:url"
+      "random:url",
+      "random:address",
+      "random:altitude",
+      "random:areacode",
+      "random:city",
+      "random:coordinates",
+      "random:country",
+      "random:phone",
+      "random:postal",
+      "random:province",
+      "random:state",
+      "random:street",
+      "random:zip"
     ]
   },
   "repository": "https://github.com/atom/random",

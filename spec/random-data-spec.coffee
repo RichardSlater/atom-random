@@ -168,3 +168,39 @@ describe "Random Data", ->
   it "inserts random url", ->
     spyOn(chance, 'url').andReturn('http://sek.gov/hawvo')
     dataTest 'url', 'http://sek.gov/hawvo'
+  it "inserts random address", ->
+    spyOn(chance, 'address').andReturn('1831 Daad Court')
+    dataTest 'address', '1831 Daad Court'
+  it "inserts random altitude", ->
+    spyOn(chance, 'altitude').andReturn('2884.88302')
+    dataTest 'altitude', '2884.88302'
+  it "inserts random areacode", ->
+    spyOn(chance, 'areacode').andReturn('(418)')
+    dataTest 'areacode', '(418)'
+  it "inserts random city", ->
+    spyOn(chance, 'city').andReturn('Lomkojana')
+    dataTest 'city', 'Lomkojana'
+  it "inserts random coordinates", ->
+    spyOn(chance, 'coordinates').andReturn('-80.64074, 129.12049')
+    dataTest 'coordinates', '-80.64074, 129.12049'
+  it "inserts random country", ->
+    spyOn(chance, 'country').andReturn('SC')
+    dataTest 'country', 'SC'
+  it "inserts random phone", ->
+    spyOn(chance, 'phone').andReturn('(906) 578-9097')
+    dataTest 'phone', '(906) 578-9097'
+  it "inserts random postal", ->
+    spyOn(chance, 'postal').andReturn('G7P 2I0')
+    dataTest 'postal', 'G7P 2I0'
+  it "inserts random province", ->
+    spyOn(chance, 'province').andReturn('PE')
+    dataTest 'province', 'PE'
+  it "inserts random state", ->
+    spyOn(chance, 'state').andReturn('DC')
+    dataTest 'state', 'DC'
+  it "inserts random street", ->
+    spyOn(chance, 'street').andReturn('Joza Grove')
+    dataTest 'street', 'Joza Grove'
+  it "inserts random zip", ->
+    spyOn(chance, 'zip').andReturn('22319')
+    dataTest 'zip', '22319'
