@@ -114,3 +114,18 @@ describe "Random Data", ->
   it "inserts random suffix", ->
     spyOn(chance, 'suffix').andReturn('Jr.')
     dataTest 'suffix', 'Jr.'
+  it "inserts random android_id", ->
+    spyOn(chance, 'android_id').andReturn('APA91loebnEQiOc0QTE2bEQb3pQyWM7SIGUXgabBmROqhvDTyR078JXxW6FQBRWRDnk9tzV7GOp-QDGWDPwYqfWNJ-bMYiwbmU0nA_1-4-RVV3tFuYT6CZAy3_CNLbMX40tKsoCrMb10OskS_9i11wjhRwE33AFket90QYC1ofRk8om32Vw1zH8')
+    dataTest 'android_id', 'APA91loebnEQiOc0QTE2bEQb3pQyWM7SIGUXgabBmROqhvDTyR078JXxW6FQBRWRDnk9tzV7GOp-QDGWDPwYqfWNJ-bMYiwbmU0nA_1-4-RVV3tFuYT6CZAy3_CNLbMX40tKsoCrMb10OskS_9i11wjhRwE33AFket90QYC1ofRk8om32Vw1zH8'
+  it "inserts random apple_token", ->
+    spyOn(chance, 'apple_token').andReturn('9d8a442293a3d393c8eb72dd74bae6966c37e998bebfcf6da5cb5faa5829e766')
+    dataTest 'apple_token', '9d8a442293a3d393c8eb72dd74bae6966c37e998bebfcf6da5cb5faa5829e766'
+  it "inserts random bb_pin", ->
+    spyOn(chance, 'bb_pin').andReturn('5352a6ef')
+    dataTest 'bb_pin', '5352a6ef'
+  it "inserts random wp7_anid", ->
+    spyOn(chance, 'wp7_anid').andReturn('A=A3A1192DF99C5B79ACC76E28B5CD8950&E=23d&W=0')
+    dataTest 'wp7_anid', 'A=A3A1192DF99C5B79ACC76E28B5CD8950&E=23d&W=0'
+  it "inserts random wp8_anid2", ->
+    spyOn(chance, 'wp8_anid2').andReturn('ZWQ3YzNlODkzYmJhNThlNjFlZjUxMWZjZTE4OWRkYTc=')
+    dataTest 'wp8_anid2', 'ZWQ3YzNlODkzYmJhNThlNjFlZjUxMWZjZTE4OWRkYTc='

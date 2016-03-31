@@ -83,6 +83,26 @@ menu: [
         command: "random:suffix"
       }
       {
+        label: "Random Android ID"
+        command: "random:android_id"
+      }
+      {
+        label: "Random Apple Token"
+        command: "random:apple_token"
+      }
+      {
+        label: "Random BlackBerry Device PIN"
+        command: "random:bb_pin"
+      }
+      {
+        label: "Random Windows Phone 7 ANID"
+        command: "random:wp7_anid"
+      }
+      {
+        label: "Random Windows Phone 8 ANID2"
+        command: "random:wp8_anid2"
+      }
+      {
         type: "separator"
       }
       {

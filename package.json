@@ -26,7 +26,12 @@
       "random:name",
       "random:prefix",
       "random:ssn",
-      "random:suffix"
+      "random:suffix",
+      "random:android_id",
+      "random:apple_token",
+      "random:bb_pin",
+      "random:wp7_anid",
+      "random:wp8_anid2"
     ]
   },
   "repository": "https://github.com/atom/random",

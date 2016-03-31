@@ -55,6 +55,11 @@ module.exports = AtomRandom =
       'random:prefix': => @random(chance.prefix())
       'random:ssn': => @random(chance.ssn())
       'random:suffix': => @random(chance.suffix())
+      'random:android_id': => @random(chance.android_id())
+      'random:apple_token': => @random(chance.apple_token())
+      'random:bb_pin': => @random(chance.bb_pin())
+      'random:wp7_anid': => @random(chance.wp7_anid())
+      'random:wp8_anid2': => @random(chance.wp8_anid2())
       # additional commands go here
     }
 
