@@ -60,6 +60,19 @@ module.exports = AtomRandom =
       'random:bb_pin': => @random(chance.bb_pin())
       'random:wp7_anid': => @random(chance.wp7_anid())
       'random:wp8_anid2': => @random(chance.wp8_anid2())
+      'random:avatar': => @random(chance.avatar())
+      'random:color': => @random(chance.color())
+      'random:domain': => @random(chance.domain())
+      'random:email': => @random(chance.email())
+      'random:fbid': => @random(chance.fbid())
+      'random:google_analytics': => @random(chance.google_analytics())
+      'random:hashtag': => @random(chance.hashtag())
+      'random:ip': => @random(chance.ip())
+      'random:ipv6': => @random(chance.ipv6())
+      'random:klout': => @random(chance.klout())
+      'random:tld': => @random(chance.tld())
+      'random:twitter': => @random(chance.twitter())
+      'random:url': => @random(chance.url())
       # additional commands go here
     }
 

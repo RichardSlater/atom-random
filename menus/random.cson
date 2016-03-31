@@ -103,6 +103,58 @@ menu: [
         command: "random:wp8_anid2"
       }
       {
+        label: "Random Gravatar"
+        command: "random:avatar"
+      }
+      {
+        label: "Random Color"
+        command: "random:color"
+      }
+      {
+        label: "Random Domain"
+        command: "random:domain"
+      }
+      {
+        label: "Random E-mail"
+        command: "random:email"
+      }
+      {
+        label: "Random Facebook ID"
+        command: "random:fbid"
+      }
+      {
+        label: "Random Google Analytics Tracking Code"
+        command: "random:google_analytics"
+      }
+      {
+        label: "Random Hashtag"
+        command: "random:hashtag"
+      }
+      {
+        label: "Random IPv4 Address"
+        command: "random:ip"
+      }
+      {
+        label: "Random IPv6 Address"
+        command: "random:ipv6"
+      }
+      {
+        label: "Random Klout"
+        command: "random:klout"
+      }
+      {
+        label: "Random Top Level Domain Name"
+        command: "random:tld"
+      }
+      {
+        label: "Random Twitter"
+        command: "random:twitter"
+      }
+      {
+        label: "Random URL"
+        command: "random:url"
+      }
+      {
         type: "separator"
       }
       {

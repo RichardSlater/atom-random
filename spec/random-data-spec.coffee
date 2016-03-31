@@ -129,3 +129,42 @@ describe "Random Data", ->
   it "inserts random wp8_anid2", ->
     spyOn(chance, 'wp8_anid2').andReturn('ZWQ3YzNlODkzYmJhNThlNjFlZjUxMWZjZTE4OWRkYTc=')
     dataTest 'wp8_anid2', 'ZWQ3YzNlODkzYmJhNThlNjFlZjUxMWZjZTE4OWRkYTc='
+  it "inserts random avatar", ->
+    spyOn(chance, 'avatar').andReturn('//www.gravatar.com/avatar/f958e39e591e12782462ff93e49c50ac')
+    dataTest 'avatar', '//www.gravatar.com/avatar/f958e39e591e12782462ff93e49c50ac'
+  it "inserts random color", ->
+    spyOn(chance, 'color').andReturn('rgb(75,163,43)')
+    dataTest 'color', 'rgb(75,163,43)'
+  it "inserts random domain", ->
+    spyOn(chance, 'domain').andReturn('sa.gov')
+    dataTest 'domain', 'sa.gov'
+  it "inserts random email", ->
+    spyOn(chance, 'email').andReturn('fuc@monwan.io')
+    dataTest 'email', 'fuc@monwan.io'
+  it "inserts random fbid", ->
+    spyOn(chance, 'fbid').andReturn('1000059066282306')
+    dataTest 'fbid', '1000059066282306'
+  it "inserts random google_analytics", ->
+    spyOn(chance, 'google_analytics').andReturn('UA-131570-79')
+    dataTest 'google_analytics', 'UA-131570-79'
+  it "inserts random hashtag", ->
+    spyOn(chance, 'hashtag').andReturn('#lile')
+    dataTest 'hashtag', '#lile'
+  it "inserts random ip", ->
+    spyOn(chance, 'ip').andReturn('49.241.35.71')
+    dataTest 'ip', '49.241.35.71'
+  it "inserts random ipv6", ->
+    spyOn(chance, 'ipv6').andReturn('9341:761d:3601:e9a9:cfcc:9f0c:a452:ffdd')
+    dataTest 'ipv6', '9341:761d:3601:e9a9:cfcc:9f0c:a452:ffdd'
+  it "inserts random klout", ->
+    spyOn(chance, 'klout').andReturn('57')
+    dataTest 'klout', '57'
+  it "inserts random tld", ->
+    spyOn(chance, 'tld').andReturn('net')
+    dataTest 'tld', 'net'
+  it "inserts random twitter", ->
+    spyOn(chance, 'twitter').andReturn('@asu')
+    dataTest 'twitter', '@asu'
+  it "inserts random url", ->
+    spyOn(chance, 'url').andReturn('http://sek.gov/hawvo')
+    dataTest 'url', 'http://sek.gov/hawvo'

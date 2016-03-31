@@ -31,7 +31,20 @@
       "random:apple_token",
       "random:bb_pin",
       "random:wp7_anid",
-      "random:wp8_anid2"
+      "random:wp8_anid2",
+      "random:avatar",
+      "random:color",
+      "random:domain",
+      "random:email",
+      "random:fbid",
+      "random:google_analytics",
+      "random:hashtag",
+      "random:ip",
+      "random:ipv6",
+      "random:klout",
+      "random:tld",
+      "random:twitter",
+      "random:url"
     ]
   },
   "repository": "https://github.com/atom/random",
