@@ -203,6 +203,26 @@ menu: [
         command: "random:zip"
       }
       {
+        label: "Random Date"
+        command: "random:date"
+      }
+      {
+        label: "Random Hammertime"
+        command: "random:hammertime"
+      }
+      {
+        label: "Random Month"
+        command: "random:month"
+      }
+      {
+        label: "Random Year"
+        command: "random:year"
+      }
+      {
+        label: "Random Timestamp"
+        command: "random:timestamp"
+      }
+      {
         type: "separator"
       }
       {

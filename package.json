@@ -56,7 +56,12 @@
       "random:province",
       "random:state",
       "random:street",
-      "random:zip"
+      "random:zip",
+      "random:date",
+      "random:hammertime",
+      "random:month",
+      "random:year",
+      "random:timestamp"
     ]
   },
   "repository": "https://github.com/atom/random",

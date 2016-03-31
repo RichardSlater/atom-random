@@ -204,3 +204,18 @@ describe "Random Data", ->
   it "inserts random zip", ->
     spyOn(chance, 'zip').andReturn('22319')
     dataTest 'zip', '22319'
+  it "inserts random date", ->
+    spyOn(chance, 'date').andReturn('Fri Jan 15 2106 08:06:14 GMT+0000 (GMT Standard Time)')
+    dataTest 'date', 'Fri Jan 15 2106 08:06:14 GMT+0000 (GMT Standard Time)'
+  it "inserts random hammertime", ->
+    spyOn(chance, 'hammertime').andReturn('2610322083978')
+    dataTest 'hammertime', '2610322083978'
+  it "inserts random month", ->
+    spyOn(chance, 'month').andReturn('February')
+    dataTest 'month', 'February'
+  it "inserts random year", ->
+    spyOn(chance, 'year').andReturn('2077')
+    dataTest 'year', '2077'
+  it "inserts random timestamp", ->
+    spyOn(chance, 'timestamp').andReturn('25272414')
+    dataTest 'timestamp', '25272414'
