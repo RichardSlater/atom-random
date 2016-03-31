@@ -106,6 +106,10 @@ module.exports = AtomRandom =
       'random:d20': => @random(chance.d20())
       'random:d30': => @random(chance.d30())
       'random:d100': => @random(chance.d100())
+      'random:hash': => @random(chance.hash())
+      'random:normal': => @random(chance.normal())
+      'random:radio': => @random(chance.radio())
+      'random:tv': => @random(chance.tv())
       # additional commands go here
     }
 

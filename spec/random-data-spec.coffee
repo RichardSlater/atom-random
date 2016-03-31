@@ -267,3 +267,12 @@ describe "Random Data", ->
   it "inserts random d100", ->
     spyOn(chance, 'd100').andReturn('27')
     dataTest 'd100', '27'
+  it "inserts random normal", ->
+    spyOn(chance, 'normal').andReturn('-0.3289130431748269')
+    dataTest 'normal', '-0.3289130431748269'
+  it "inserts random radio", ->
+    spyOn(chance, 'radio').andReturn('WKNS')
+    dataTest 'radio', 'WKNS'
+  it "inserts random tv", ->
+    spyOn(chance, 'tv').andReturn('KICE')
+    dataTest 'tv', 'KICE'

@@ -77,7 +77,11 @@
       "random:d12",
       "random:d20",
       "random:d30",
-      "random:d100"
+      "random:d100",
+      "random:hash",
+      "random:normal",
+      "random:radio",
+      "random:tv"
     ]
   },
   "repository": "https://github.com/atom/random",

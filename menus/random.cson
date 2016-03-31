@@ -287,6 +287,22 @@ menu: [
         command: "random:d100"
       }
       {
+        label: "Random Hash"
+        command: "random:hash"
+      }
+      {
+        label: "Random Normally Distributed Value"
+        command: "random:normal"
+      }
+      {
+        label: "Random Radio Station"
+        command: "random:radio"
+      }
+      {
+        label: "Random TV Station"
+        command: "random:tv"
+      }
+      {
         type: "separator"
       }
       {
