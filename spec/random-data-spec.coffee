@@ -243,3 +243,27 @@ describe "Random Data", ->
   it "inserts random exp_year", ->
     spyOn(chance, 'exp_year').andReturn('2019')
     dataTest 'exp_year', '2019'
+  it "inserts random d4", ->
+    spyOn(chance, 'd4').andReturn('1')
+    dataTest 'd4', '1'
+  it "inserts random d6", ->
+    spyOn(chance, 'd6').andReturn('4')
+    dataTest 'd6', '4'
+  it "inserts random d8", ->
+    spyOn(chance, 'd8').andReturn('3')
+    dataTest 'd8', '3'
+  it "inserts random d10", ->
+    spyOn(chance, 'd10').andReturn('7')
+    dataTest 'd10', '7'
+  it "inserts random d12", ->
+    spyOn(chance, 'd12').andReturn('9')
+    dataTest 'd12', '9'
+  it "inserts random d20", ->
+    spyOn(chance, 'd20').andReturn('19')
+    dataTest 'd20', '19'
+  it "inserts random d30", ->
+    spyOn(chance, 'd30').andReturn('23')
+    dataTest 'd30', '23'
+  it "inserts random d100", ->
+    spyOn(chance, 'd100').andReturn('27')
+    dataTest 'd100', '27'

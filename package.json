@@ -69,7 +69,15 @@
       "random:dollar",
       "random:exp",
       "random:exp_month",
-      "random:exp_year"
+      "random:exp_year",
+      "random:d4",
+      "random:d6",
+      "random:d8",
+      "random:d10",
+      "random:d12",
+      "random:d20",
+      "random:d30",
+      "random:d100"
     ]
   },
   "repository": "https://github.com/atom/random",

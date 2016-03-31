@@ -255,6 +255,38 @@ menu: [
         command: "random:exp_year"
       }
       {
+        label: "Random 4-Sided Dice"
+        command: "random:d4"
+      }
+      {
+        label: "Random 6-Sided Dice"
+        command: "random:d6"
+      }
+      {
+        label: "Random 8-Sided Dice"
+        command: "random:d8"
+      }
+      {
+        label: "Random 10-Sided Dice"
+        command: "random:d10"
+      }
+      {
+        label: "Random 12-Sided Dice"
+        command: "random:d12"
+      }
+      {
+        label: "Random 20-Sided Dice"
+        command: "random:d20"
+      }
+      {
+        label: "Random 30-Sided Dice"
+        command: "random:d30"
+      }
+      {
+        label: "Random 100-Sided Dice"
+        command: "random:d100"
+      }
+      {
         type: "separator"
       }
       {

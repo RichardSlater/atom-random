@@ -98,6 +98,14 @@ module.exports = AtomRandom =
       'random:exp': => @random(chance.exp())
       'random:exp_month': => @random(chance.exp_month())
       'random:exp_year': => @random(chance.exp_year())
+      'random:d4': => @random(chance.d4())
+      'random:d6': => @random(chance.d6())
+      'random:d8': => @random(chance.d8())
+      'random:d10': => @random(chance.d10())
+      'random:d12': => @random(chance.d12())
+      'random:d20': => @random(chance.d20())
+      'random:d30': => @random(chance.d30())
+      'random:d100': => @random(chance.d100())
       # additional commands go here
     }
 
