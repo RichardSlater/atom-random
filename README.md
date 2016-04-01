@@ -4,7 +4,7 @@
 
 Generates random data directly in Atom using the excellent [Chance](http://chancejs.com/) library written by [Victor Quinn](https://www.victorquinn.com/).  All supported random data types are accessible from the [command pallete](https://atom.io/packages/command-palette), <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd>, and from the `Random` menu.  If you are commonly using a particular data type then you can also bind it in your [keymap](http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/).
 
-![Screenshot of Random Package](https://cdn.rawgit.com/RichardSlater/atom-random/v0.1.3/assets/screenshot.gif)
+![Screenshot of Random Package](https://cdn.rawgit.com/RichardSlater/atom-random/v0.1.4/assets/screenshot.gif)
 
 ## Bind a Keymap
 Every peice of random data can be accessed from the command pallet by pressing <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd> then by typing `Random` followed by the data type, however if you are using a particular data type you might want to bind a singe keypress to save you time.
@@ -20,7 +20,7 @@ This will map the key press <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>G<
 
 This package is entirely based around the superb [Chance](http://chancejs.com/) library written by [Victor Quinn](https://www.victorquinn.com/), by default this library uses a [Mersenne Twister](https://en.wikipedia.org/wiki/Mersenne_Twister) to generate a pseudo-random seed which is used for all subsequent random data generation.  If you want to use an external random data source you simply call the `Reseed` command from the Command Palette this will make a call out to [Random.org's Integer Generator](https://www.random.org/integers/) to reseed the chance library.   
 
-![Reseed using RANDOM.ORG](https://cdn.rawgit.com/RichardSlater/atom-random/v0.1.3/assets/reseed.gif)
+![Reseed using RANDOM.ORG](https://cdn.rawgit.com/RichardSlater/atom-random/v0.1.4/assets/reseed.gif)
 
 ## List of Support Data Types
 
