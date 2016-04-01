@@ -10,9 +10,9 @@ clone_depth: 10
 
 skip_tags: true
 
-#notifications:
-#  - provider: Webhook
-#  - url: https://webhooks.gitter.im/e/e81e35dc4da288ca16ed
+notifications:
+ - provider: Webhook
+ - url: https://webhooks.gitter.im/e/bed94e05f2fbf3107e60
 
 environment:
   APM_TEST_PACKAGES:
