@@ -84,7 +84,7 @@
       "random:tv"
     ]
   },
-  "repository": "https://github.com/RichardSlater/random",
+  "repository": "https://github.com/RichardSlater/atom-random",
   "license": "Apache-2.0",
   "licenses": [
     {
