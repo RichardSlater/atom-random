@@ -2,19 +2,19 @@
 
 [![Travis](https://img.shields.io/travis/RichardSlater/atom-random.svg?style=flat-square&label=linux%20and%20osx%20build)](https://travis-ci.org/RichardSlater/atom-random) [![AppVeyor](https://img.shields.io/appveyor/ci/richard-slater/atom-random.svg?style=flat-square&label=windows%20build)](https://ci.appveyor.com/project/richard-slater/atom-random) [![Code Climate](https://img.shields.io/codeclimate/github/RichardSlater/atom-random.svg?style=flat-square)](https://codeclimate.com/github/RichardSlater/atom-random) [![Downloads](https://img.shields.io/apm/dm/random.svg?style=flat-square)](https://atom.io/packages/random) [![APM Version](https://img.shields.io/apm/v/random.svg?style=flat-square)](https://atom.io/packages/random) [![David](https://img.shields.io/david/RichardSlater/atom-random.svg?style=flat-square)](https://david-dm.org/RichardSlater/atom-random) ![Apache2 Licenced](https://img.shields.io/apm/l/random.svg?style=flat-square) [![Gitter](https://img.shields.io/gitter/room/RichardSlater/atom-random.js.svg?style=flat-square)](https://gitter.im/RichardSlater/atom-random)
 
-Generates random data directly in Atom using the excellent [Chance](http://chancejs.com/) library written by [Victor Quinn](https://www.victorquinn.com/).  All supported random data types are accessible from the [command pallete](https://atom.io/packages/command-palette), <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd>, and from the `Random` menu.  If you are commonly using a particular data type then you can also bind it in your [keymap](http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/).
+Generates random data directly in Atom using the excellent [Chance](http://chancejs.com/) library written by [Victor Quinn](https://www.victorquinn.com/).  All supported random data types are accessible from the [command pallete](https://atom.io/packages/command-palette), <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>, and from the `Random` menu.  If you are commonly using a particular data type then you can also bind it in your [keymap](http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/).
 
 ![Screenshot of Random Package](https://cdn.rawgit.com/RichardSlater/atom-random/v0.1.4/assets/screenshot.gif)
 
 ## Bind a Keymap
-Every peice of random data can be accessed from the command pallet by pressing <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd> then by typing `Random` followed by the data type, however if you are using a particular data type you might want to bind a singe keypress to save you time.
+Every peice of random data can be accessed from the command pallet by pressing <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd> then by typing `Random` followed by the data type, however if you are using a particular data type you might want to bind a singe keypress to save you time.
 
 Fortunately Atom makes this incredibly easy, simply go to `File` -> `Keymap...` and scroll to the bottom of the `keymap.cson` file that opens.  Paste the following at the bottom of the file:
 
     'atom-text-editor':
        'ctrl-alt-shift-g': 'random:guid'
 
-This will map the key press <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>G</kbd> to generate a new random GUID.  You can select any random data type from the list below.
+This will map the key press <kbd>Ctrl</kbd>-<kbd>Alt</kbd>-<kbd>Shift</kbd>-<kbd>G</kbd> to generate a new random GUID.  You can select any random data type from the list below.
 
 ## Reseed Chance
 
