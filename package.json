@@ -96,7 +96,7 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "chance": "^0.8.0"
+    "chance": "^1.0.1"
   },
   "devDependencies": {
     "minimist": "^1.2.0"
