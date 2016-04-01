@@ -1,7 +1,7 @@
 {
   "name": "random",
   "main": "./lib/random",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Generates several random data types, for use as passwords or as test data.",
   "keywords": [
     "random",
