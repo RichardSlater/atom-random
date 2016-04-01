@@ -3,7 +3,7 @@
   "main": "./lib/random",
   "version": "0.1.0",
   "description": "Generates several random data types, for use as passwords or as test data.",
-  "keywords": [],
+  "keywords": ["random", "data"],
   "activationCommands": {
     "atom-workspace": [
       "random:reseed",
