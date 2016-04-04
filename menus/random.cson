@@ -208,8 +208,8 @@ menu: [
       }
       
       {
-        label: "Random Date ISO 8601"
-        command: "random:iso8601"
+        label: "Random Date (ISO 8601)"
+        command: "random:isodate"
       }
       {
         label: "Random Hammertime"
