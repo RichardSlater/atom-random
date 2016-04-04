@@ -78,6 +78,7 @@ This package is entirely based around the superb [Chance](http://chancejs.com/) 
 - **Street**: random:street
 - **U.S. ZIP Code**: random:zip
 - **Date**: random:date
+- **Date (ISO 8601)**: random:isodate
 - **Hammertime**: random:hammertime
 - **Month**: random:month
 - **Year**: random:year
