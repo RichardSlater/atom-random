@@ -208,8 +208,8 @@ describe "Random Data", ->
     spyOn(chance, 'date').andReturn('Fri Jan 15 2106 08:06:14 GMT+0000 (GMT Standard Time)')
     dataTest 'date', 'Fri Jan 15 2106 08:06:14 GMT+0000 (GMT Standard Time)'
   it "inserts random iso date", ->
-    spyOn(chance, 'isodate').andReturn('2016-01-15T08:06:14.000Z')
-    dataTest 'isodate', 'Fri Jan 15 2106 08:06:14 GMT+0000 (GMT Standard Time)'
+    spyOn(chance, 'isodate').andReturn('Fri Jan 15 2106 08:06:14 GMT+0000 (GMT Standard Time)')
+    dataTest 'isodate', '2016-01-15T08:06:14.000Z'
   it "inserts random hammertime", ->
     spyOn(chance, 'hammertime').andReturn('2610322083978')
     dataTest 'hammertime', '2610322083978'
