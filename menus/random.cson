@@ -206,6 +206,11 @@ menu: [
         label: "Random Date"
         command: "random:date"
       }
+      
+      {
+        label: "Random Date (ISO 8601)"
+        command: "random:isodate"
+      }
       {
         label: "Random Hammertime"
         command: "random:hammertime"

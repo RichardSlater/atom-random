@@ -86,6 +86,7 @@ module.exports = AtomRandom =
       'random:street': => @random(chance.street())
       'random:zip': => @random(chance.zip())
       'random:date': => @random(chance.date())
+      'random:isodate': => @random(chance.date().toISOString())
       'random:hammertime': => @random(chance.hammertime())
       'random:month': => @random(chance.month())
       'random:year': => @random(chance.year())
