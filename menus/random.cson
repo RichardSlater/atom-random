@@ -206,7 +206,7 @@ menu: [
         label: "Random Date"
         command: "random:date"
       }
-      
+
       {
         label: "Random Date (ISO 8601)"
         command: "random:isodate"
@@ -306,6 +306,14 @@ menu: [
       {
         label: "Random TV Station"
         command: "random:tv"
+      }
+      {
+        label: "Random Latitude"
+        command: "random:latitude"
+      }
+      {
+        label: "Random Longitude"
+        command: "random:longitude"
       }
       {
         type: "separator"

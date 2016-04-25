@@ -111,6 +111,8 @@ module.exports = AtomRandom =
       'random:normal': => @random(chance.normal())
       'random:radio': => @random(chance.radio())
       'random:tv': => @random(chance.tv())
+      'random:latitude': => @random(chance.floating({min: -90, max: 90, fixed: 6}))
+      'random:longitude': => @random(chance.floating({min: -180, max: 180, fixed: 6}))
       # additional commands go here
     }
 

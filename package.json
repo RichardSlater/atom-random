@@ -85,7 +85,9 @@
       "random:hash",
       "random:normal",
       "random:radio",
-      "random:tv"
+      "random:tv",
+      "random:latitude",
+      "random:longitude"
     ]
   },
   "repository": "https://github.com/RichardSlater/atom-random",
