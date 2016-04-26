@@ -103,6 +103,8 @@ This package is entirely based around the superb [Chance](http://chancejs.com/) 
 - **Normally Distributed Value**: random:normal
 - **Radio Station**: random:radio
 - **TV Station**: random:tv
+- **Latitude**: random:latitude
+- **Longitude**: random:longitude
 
 ## Copyright and Licence
 
