@@ -279,3 +279,9 @@ describe "Random Data", ->
   it "inserts random tv", ->
     spyOn(chance, 'tv').andReturn('KICE')
     dataTest 'tv', 'KICE'
+  it "inserts random longitude", ->
+    spyOn(chance, 'floating').andReturn('-49.273096')
+    dataTest 'longitude', '-49.273096'
+  it "inserts random latitude", ->
+    spyOn(chance, 'floating').andReturn('-85.954858')
+    dataTest 'latitude', '-85.954858'
