@@ -12,7 +12,7 @@ skip_tags: true
 
 notifications:
  - provider: Webhook
- - url: https://webhooks.gitter.im/e/bed94e05f2fbf3107e60
+   url: https://webhooks.gitter.im/e/bed94e05f2fbf3107e60
 
 environment:
   APM_TEST_PACKAGES:
