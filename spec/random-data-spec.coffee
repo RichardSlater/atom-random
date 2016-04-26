@@ -285,3 +285,12 @@ describe "Random Data", ->
   it "inserts random latitude", ->
     spyOn(chance, 'floating').andReturn('-85.954858')
     dataTest 'latitude', '-85.954858'
+  it "inserts random 8 character password", ->
+    spyOn(chance, 'string').andReturn('r@nd0m')
+    dataTest '8-character-password', 'r@nd0m'
+  it "inserts random 10 character password", ->
+    spyOn(chance, 'string').andReturn('r@nd0m10')
+    dataTest '10-character-password', 'r@nd0m10'
+  it "inserts random 10 character password", ->
+    spyOn(chance, 'string').andReturn('r@nd0m20')
+    dataTest '20-character-password', 'r@nd0m20'

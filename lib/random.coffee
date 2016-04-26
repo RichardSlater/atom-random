@@ -21,6 +21,23 @@ module.exports = AtomRandom =
   subscriptions: null
   chance: null
   commands: null
+  passwordChars: null
+
+  config:
+    charactersAllowedInPasswords:
+      type: 'string'
+      description: '''
+      The characters used in random passwords are restricted to these
+      characters, by default this excludes characters that are commonly mistaken
+      for other characters and keys that are hard to find on international or
+      mobile keyboards.
+      '''
+      default:
+        'abcdefghjkmnpqrtuvwxyzABCDEFGHJKMNPQRTUVWXYZ2346789!@#$%^&*-+=|?'
+
+  updatePasswordChars: (newValue) =>
+    console.log newValue
+    @passwordChars = newValue
 
   activate: (state) ->
     @chance = new Chance
@@ -111,12 +128,21 @@ module.exports = AtomRandom =
       'random:normal': => @random(chance.normal())
       'random:radio': => @random(chance.radio())
       'random:tv': => @random(chance.tv())
-      'random:latitude': => @random(chance.floating({min: -90, max: 90, fixed: 6}))
-      'random:longitude': => @random(chance.floating({min: -180, max: 180, fixed: 6}))
+      'random:latitude': => @random(chance.floating({
+        min: -90, max: 90, fixed: 6 }))
+      'random:longitude': => @random(chance.floating({
+        min: -180, max: 180, fixed: 6 }))
+      'random:8-character-password': => @generatePassword(chance, 8, @random)
+      'random:10-character-password': => @generatePassword(chance, 10, @random)
+      'random:20-character-password': => @generatePassword(chance, 20, @random)
       # additional commands go here
     }
 
     @subscriptions.add atom.commands.add 'atom-workspace', @commands
+
+    @subscriptions.add atom.config.observe(
+      'random.charactersAllowedInPasswords', @updatePasswordChars
+    )
 
   deactivate: ->
     @subscriptions.dispose()
@@ -145,3 +171,7 @@ module.exports = AtomRandom =
   random: (data) ->
     if editor = atom.workspace.getActiveTextEditor()
       editor.insertText(data.toString())
+
+  generatePassword: (chance, length, random) =>
+    password = chance.string { pool: @passwordChars, length: length }
+    random password

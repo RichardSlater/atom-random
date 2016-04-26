@@ -87,7 +87,10 @@
       "random:radio",
       "random:tv",
       "random:latitude",
-      "random:longitude"
+      "random:longitude",
+      "random:8-character-password",
+      "random:10-character-password",
+      "random:20-character-password"
     ]
   },
   "repository": "https://github.com/RichardSlater/atom-random",

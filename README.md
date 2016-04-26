@@ -105,6 +105,9 @@ This package is entirely based around the superb [Chance](http://chancejs.com/) 
 - **TV Station**: random:tv
 - **Latitude**: random:latitude
 - **Longitude**: random:longitude
+- **Password (8 Characters)**: random:8-character-password
+- **Password (10 Characters)**: random:10-character-password
+- **Password (20 Characters)**: random:20-character-password
 
 ## Copyright and Licence
 

@@ -1,3 +1,6 @@
+## 1.3.0 - Added Passwords
+* Generates random passwords based upon random strings with specific characters that are commonly mistaken for other characters and keys that are difficult to find removed from the string.
+
 ## 1.2.0 - Add Latitude / Longitude
 * Added support for random [latitude and longitude](https://en.wikipedia.org/wiki/Geographic_coordinate_system) - Thanks to [*joshkopeck*](https://github.com/joshkopecek).
 

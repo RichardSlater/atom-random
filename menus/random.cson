@@ -316,6 +316,18 @@ menu: [
         command: "random:longitude"
       }
       {
+        label: "8-Character Password"
+        command: "random:8-character-password"
+      }
+      {
+        label: "10-Character Password"
+        command: "random:10-character-password"
+      }
+      {
+        label: "20-Character Password"
+        command: "random:20-character-password"
+      }
+      {
         type: "separator"
       }
       {
