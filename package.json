@@ -90,7 +90,8 @@
       "random:longitude",
       "random:8-character-password",
       "random:10-character-password",
-      "random:20-character-password"
+      "random:20-character-password",
+      "random:mac_address"
     ]
   },
   "repository": "https://github.com/RichardSlater/atom-random",
