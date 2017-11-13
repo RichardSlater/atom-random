@@ -17,8 +17,9 @@ git:
 sudo: false
 
 os:
-  - linux
-  - osx
+  - os: linux
+    dist: trusty
+  - os: osx
 
 env:
   global:
