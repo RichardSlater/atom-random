@@ -334,6 +334,10 @@ menu: [
         label: "Reseed"
         command: "random:reseed"
       }
+      {
+        label: "MAC Address"
+        command: "random:mac_address"
+      }
     ]
   }
 ]

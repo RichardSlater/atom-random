@@ -294,3 +294,6 @@ describe "Random Data", ->
   it "inserts random 10 character password", ->
     spyOn(chance, 'string').andReturn('r@nd0m20')
     dataTest '20-character-password', 'r@nd0m20'
+  it "inserts random mac address", ->
+    spyOn(chance, 'mac_address').andReturn('D1:D5:55:90:00:A3')
+    dataTest 'mac_address', 'D1:D5:55:90:00:A3'

@@ -135,6 +135,7 @@ module.exports = AtomRandom =
       'random:8-character-password': => @generatePassword(chance, 8, @random)
       'random:10-character-password': => @generatePassword(chance, 10, @random)
       'random:20-character-password': => @generatePassword(chance, 20, @random)
+      'random:mac_address': => @random(chance.mac_address())
       # additional commands go here
     }
 

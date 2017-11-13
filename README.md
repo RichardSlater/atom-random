@@ -108,6 +108,7 @@ This package is entirely based around the superb [Chance](http://chancejs.com/) 
 - **Password (8 Characters)**: random:8-character-password
 - **Password (10 Characters)**: random:10-character-password
 - **Password (20 Characters)**: random:20-character-password
+- **MAC Address**: random:mac_address
 
 ## Copyright and Licence
 
