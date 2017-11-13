@@ -1,3 +1,6 @@
+## 1.4.0 - Added MAC address
+* Contribution by [Riccardo Leschiutta](https://github.com/prgpascal) adding support for [MAC Addresses](https://en.wikipedia.org/wiki/MAC_address).
+
 ## 1.3.0 - Added Passwords
 * Generates random passwords based upon random strings with specific characters that are commonly mistaken for other characters and keys that are difficult to find removed from the string.
 

@@ -139,6 +139,10 @@ menu: [
         command: "random:ipv6"
       }
       {
+        label: "MAC Address"
+        command: "random:mac_address"
+      }
+      {
         label: "Random Klout"
         command: "random:klout"
       }
@@ -333,10 +337,6 @@ menu: [
       {
         label: "Reseed"
         command: "random:reseed"
-      }
-      {
-        label: "MAC Address"
-        command: "random:mac_address"
       }
     ]
   }
